@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.7.0_80" class="java.beans.XMLDecoder">
+ <object class="muylgualboutique.ListaPrendas" id="ListaPrendas0">
+  <void property="lista">
+   <void method="add">
+    <object class="muylgualboutique.Prenda">
+     <void property="codigo">
+      <string>12dc</string>
+     </void>
+     <void property="descripcion">
+      <string>Camiseta de manga corta</string>
+     </void>
+     <void property="stock">
+      <int>30</int>
+     </void>
+     <void property="talla">
+      <string>XL</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="muylgualboutique.Prenda">
+     <void property="codigo">
+      <string>16zq</string>
+     </void>
+     <void property="descripcion">
+      <string>Pantalón corto verano</string>
+     </void>
+     <void property="stock">
+      <int>40</int>
+     </void>
+     <void property="talla">
+      <string>M</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="muylgualboutique.Prenda">
+     <void property="codigo">
+      <string>45rc</string>
+     </void>
+     <void property="descripcion">
+      <string>jersey caballero</string>
+     </void>
+     <void property="precio_venta">
+      <double>24.99</double>
+     </void>
+     <void property="stock">
+      <int>105</int>
+     </void>
+     <void property="talla">
+      <string>XS</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="muylgualboutique.Prenda">
+     <void property="codigo">
+      <string>02mv</string>
+     </void>
+     <void property="descripcion">
+      <string>falda marylin monroe</string>
+     </void>
+     <void property="precio_venta">
+      <double>42.3</double>
+     </void>
+     <void property="stock">
+      <int>75</int>
+     </void>
+     <void property="talla">
+      <string>S</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="muylgualboutique.Prenda">
+     <void property="codigo">
+      <string>05py</string>
+     </void>
+     <void property="color">
+      <string>gris</string>
+     </void>
+     <void property="coste">
+      <double>15.25</double>
+     </void>
+     <void property="descripcion">
+      <string>chaqueta señora moderna</string>
+     </void>
+     <void property="precio_venta">
+      <double>62.99</double>
+     </void>
+     <void property="stock">
+      <int>30</int>
+     </void>
+     <void property="talla">
+      <string>XL</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="muylgualboutique.Prenda">
+     <void property="codigo">
+      <string>ax65</string>
+     </void>
+     <void property="color">
+      <string>blanco</string>
+     </void>
+     <void property="descripcion">
+      <string>Sudadera newyorkina</string>
+     </void>
+     <void property="stock">
+      <int>48</int>
+     </void>
+     <void property="talla">
+      <string>XL</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="muylgualboutique.Prenda">
+     <void property="codigo">
+      <string>vx32</string>
+     </void>
+     <void property="color">
+      <string>azul</string>
+     </void>
+     <void property="coste">
+      <double>13.25</double>
+     </void>
+     <void property="descripcion">
+      <string>Camisa azul Miterrand</string>
+     </void>
+     <void property="precio_venta">
+      <double>29.5</double>
+     </void>
+     <void property="stock">
+      <int>50</int>
+     </void>
+     <void property="talla">
+      <string>L</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="muylgualboutique.Prenda">
+     <void property="codigo">
+      <string>rq98</string>
+     </void>
+     <void property="color">
+      <string>rojo</string>
+     </void>
+     <void property="coste">
+      <double>5.79</double>
+     </void>
+     <void property="descripcion">
+      <string>Camiseta Bad Boy</string>
+     </void>
+     <void property="stock">
+      <int>90</int>
+     </void>
+     <void property="talla">
+      <string>XL</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="muylgualboutique.Prenda">
+     <void property="codigo">
+      <string>564fr</string>
+     </void>
+     <void property="color">
+      <string>azul</string>
+     </void>
+     <void property="coste">
+      <double>13.74</double>
+     </void>
+     <void property="descripcion">
+      <string>Pantalón vaquero</string>
+     </void>
+     <void property="precio_venta">
+      <double>44.74</double>
+     </void>
+     <void property="stock">
+      <int>215</int>
+     </void>
+     <void property="talla">
+      <string>XS</string>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
+</java>
