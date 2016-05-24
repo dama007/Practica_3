@@ -1,21 +1,24 @@
 
 package muylgualboutique;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author usu21
  */
-public class SeleccionarPrenda extends javax.swing.JDialog {
+public class BajaPrenda extends javax.swing.JDialog {
+    
     
     private Prenda eliminar;    
-    private ListaPrendas ropas;
+    private ListaPrendas ropaEscogida;
 
-    public ListaPrendas getRopas() {
-        return ropas;
+    public ListaPrendas getRopaEscogida() {
+        return ropaEscogida;
     }
 
-    public void setRopas(ListaPrendas ropas) {
-        this.ropas = ropas;
+    public void setRopaEscogida(ListaPrendas ropaEscogida) {
+        this.ropaEscogida = ropaEscogida;
     }
 
 
@@ -29,9 +32,9 @@ public class SeleccionarPrenda extends javax.swing.JDialog {
 
 
     
-    public SeleccionarPrenda(java.awt.Frame parent, boolean modal) {
+    public BajaPrenda(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
-        ropas = MuylgualBoutique.misPrendas;
+        ropaEscogida = MuylgualBoutique.misPrendas;
         eliminar = new Prenda();
         initComponents();
     }
@@ -47,16 +50,21 @@ public class SeleccionarPrenda extends javax.swing.JDialog {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Baja prenda");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---Escoge un registro---" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---Escoger prenda---", "azul", "verde", "rojo", "amarillo", "gris", "blanco", "negro" }));
 
-        org.jdesktop.beansbinding.ELProperty eLProperty = org.jdesktop.beansbinding.ELProperty.create("${eliminar}");
+        org.jdesktop.beansbinding.ELProperty eLProperty = org.jdesktop.beansbinding.ELProperty.create("${ropaEscogida.lista}");
         org.jdesktop.swingbinding.JComboBoxBinding jComboBoxBinding = org.jdesktop.swingbinding.SwingBindings.createJComboBoxBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, eLProperty, jComboBox1);
         bindingGroup.addBinding(jComboBoxBinding);
-        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${ropas.lista}"), jComboBox1, org.jdesktop.beansbinding.BeanProperty.create("selectedItem"));
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${eliminar.color}"), jComboBox1, org.jdesktop.beansbinding.BeanProperty.create("selectedItem"));
         bindingGroup.addBinding(binding);
 
-        jButton1.setText("Eliminar");
+        jButton1.setText("Borrar del registro");
+
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${ropaEscogida.lista}"), jButton1, org.jdesktop.beansbinding.BeanProperty.create("selected"));
+        bindingGroup.addBinding(binding);
+
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -77,14 +85,12 @@ public class SeleccionarPrenda extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(70, 70, 70)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -93,7 +99,7 @@ public class SeleccionarPrenda extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addContainerGap())
         );
@@ -108,10 +114,17 @@ public class SeleccionarPrenda extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        if (ropaEscogida.equals(new Prenda())) {
+            JOptionPane.showMessageDialog(this, "Debes seleccionar una prenda.");
+        } else {
+            ropaEscogida.borrarRegistro(eliminar);
+            MuylgualBoutique.miFichero.grabar(MuylgualBoutique.misPrendas);
+            JOptionPane.showMessageDialog(this, "Prenda eliminada del registro.");
+            dispose();
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

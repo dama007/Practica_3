@@ -31,6 +31,7 @@ public class Menu extends javax.swing.JFrame {
         jXDatePicker1 = new org.jdesktop.swingx.JXDatePicker();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Menu");
 
         jButton1.setText("Alta a Prenda nueva");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -177,21 +178,19 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        TotalPrendas tp = new TotalPrendas(this,true);
-        tp.setLocationRelativeTo(null);
-        tp.setVisible(true);
-        JOptionPane.showMessageDialog(this, "Total de prendas "+ MuylgualBoutique.misPrendas.totalDePrendas());
+
+        JOptionPane.showMessageDialog(this, "Total de prendas es: " + MuylgualBoutique.misPrendas.totalDePrendas());
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-//        JOptionPane.showMessageDialog(this, "El valor del inventario es:" + MuylgualBoutique.misPrendas.valorInventario());
-        ValoracionStocks vs = new ValoracionStocks(this,true);
-        vs.setLocationRelativeTo(null);
-        vs.setVisible(true);
+      
+        JOptionPane.showMessageDialog(this, "Valor del inventario es: " + MuylgualBoutique.misPrendas.valorInventario());
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-
+        BajaPrenda bp = new BajaPrenda(this, true);
+        bp.setLocationRelativeTo(null);
+        bp.setVisible(true);
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed

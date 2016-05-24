@@ -3,6 +3,7 @@
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="title" type="java.lang.String" value="Escoger un color"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -51,13 +52,13 @@
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="8">
             <StringItem index="0" value="---Escoge un color---"/>
-            <StringItem index="1" value="verde "/>
-            <StringItem index="2" value="azul"/>
-            <StringItem index="3" value="blanco"/>
-            <StringItem index="4" value="gris"/>
-            <StringItem index="5" value="amarillo"/>
-            <StringItem index="6" value="rojo"/>
-            <StringItem index="7" value="rosa"/>
+            <StringItem index="1" value="azul"/>
+            <StringItem index="2" value="verde"/>
+            <StringItem index="3" value="rojo"/>
+            <StringItem index="4" value="amarillo"/>
+            <StringItem index="5" value="gris"/>
+            <StringItem index="6" value="blanco"/>
+            <StringItem index="7" value="negro"/>
           </StringArray>
         </Property>
       </Properties>
